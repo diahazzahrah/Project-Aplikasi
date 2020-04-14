@@ -1,2 +1,3 @@
 # Project-
-Applikasi dengan bahasa pemrograman c++
+Aplikasi Pemesanan Menu di Tempat Makan 
+Dengan menggunakan bahasa pemrograman c++
