@@ -1,0 +1,133 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+ int pilihan,totalPaket,banyak,hasil=0;
+ char pilihanPaket,yesNo;
+ int x=0;
+ int kode;
+ int nomor;
+ int totalSeluruhPesanan[x];
+ char catatan;
+
+ cout<<"================Eat2Eat============"<<endl;
+ cout<<"|             Hedon x Hemat        |"<<endl;
+ cout<<"==================================="<<endl;
+ 
+ cout<<"		List Menu :		      "<<endl;
+ cout<<"		1. Makanan      	  "<<endl;
+ cout<<"		2. Minuman       	  "<<endl;
+
+ cout<<"Kode Pemesanan :";
+ cin>>kode;
+ cout<<"Nomor Antrian :";
+ cin>>nomor;
+ 
+ do{
+  cout<<"Masukan Menu Yang Di Pilih : ";
+  cin>>pilihan;
+  
+  switch(pilihan){
+   case 1:
+    cout<<"List Menu Makanan"<<endl;
+    cout<<"A. Miyago Lv. 									          : Rp.10.000,00"<<endl;
+    cout<<"B. Paket Ayam Geprek Lv.       					: Rp.11.000,00"<<endl;
+    cout<<"C. Paket Burger + French Fries   				: Rp.50.000,00"<<endl;
+    cout<<"D. Indomie Goreng / Kuah Tanpa Telur 		: Rp.6.000,00"<<endl;
+    cout<<"E. Indomie Goreng / Kuah + Telor 				: Rp.8.000,00"<<endl;
+    cout<<"F. Magelangan  									        : Rp.9.000,00"<<endl;
+    cout<<"G. Penne Carbo w/ Chicken Blacpaper 			: Rp.22.000,00"<<endl;
+    cout<<"H. Pancong Meses 								        : Rp.9.000,00"<<endl;
+    cout<<"I. Soto Ayam 									          : Rp.6.000,00"<<endl;
+    
+    cout<<"Masukkan Pilihan Makanan : ";
+    cin>>pilihanPaket;
+    
+    
+    if(pilihanPaket == 'A' || pilihanPaket == 'a'){
+     totalPaket=10000;
+    } else if(pilihanPaket == 'B' || pilihanPaket == 'b'){
+     totalPaket=11000;
+    } else if(pilihanPaket == 'C' || pilihanPaket == 'c'){
+     totalPaket=50000;
+    }else if (pilihanPaket == 'D' || pilihanPaket == 'd'){
+    	totalPaket=6000;
+	} else if (pilihanPaket == 'E' || pilihanPaket == 'e'){
+		totalPaket=8000;
+	}else if (pilihanPaket == 'F' || pilihanPaket == 'f'){
+		totalPaket=9000;
+	}else if (pilihanPaket == 'G' || pilihanPaket == 'g'){
+		totalPaket=22000;
+	}else if (pilihanPaket == 'H' || pilihanPaket == 'h'){
+		totalPaket=9000;
+	}else if (pilihanPaket == 'I' || pilihanPaket == 'i'){
+		totalPaket=6000;
+	}
+	else {
+     cout<<"Paket Tidak Tersedia"<<endl;
+    }
+    
+    cout<<"Berapa Banyak Pesanan :  ";
+    cin>>banyak;
+    
+    totalSeluruhPesanan[x]=totalPaket*banyak;
+    
+    cout<<"Apakah Ada Pesanan Lainnya (Y/N) : ";
+    cin>>yesNo;
+   
+   break; 
+    
+   case 2:
+    cout<<"List Menu Minuman "<<endl;
+    cout<<"A. Es/Hangat Teh 	: Rp.2.500,00"<<endl;
+    cout<<"B. Es/Hangat Jeruk   : Rp.3.000,00"<<endl;
+    cout<<"C. Es/Hangat air   	: Rp.1.000,00"<<endl;
+    cout<<"D. Es Burjo    		: Rp.6.000,00"<<endl;
+    cout<<"E. Es Dawet 			: Rp.5.000,00"<<endl;
+    cout<<"F. Es Kopi Susu 		: Rp.18.000,00"<<endl;
+    
+    cout<<"Masukkan Pilihan Minuman : ";
+    cin>>pilihanPaket;;
+    
+    if(pilihanPaket == 'A' || pilihanPaket == 'a'){
+     totalPaket=2500;
+    } else if(pilihanPaket == 'B' || pilihanPaket == 'b'){
+     totalPaket=3000;
+    } else if(pilihanPaket == 'C' || pilihanPaket == 'c'){
+     totalPaket=1000;
+    } else if (pilihanPaket == 'D' || pilihanPaket == 'd'){
+    	totalPaket=6000;
+	}else if (pilihanPaket == 'E' || pilihanPaket == 'e'){
+		totalPaket=5000;
+	}else if (pilihanPaket == 'F' || pilihanPaket == 'f'){
+		totalPaket=18000;
+	}else {
+     cout<<"Paket Tidak Tersedia"<<endl;
+    }
+    
+    cout<<"Berapa Banyak Pesanan : ";
+    cin>>banyak;
+   
+    
+    totalSeluruhPesanan[x]=totalPaket*banyak;
+    
+    cout<<"Apakah Ada Pesanan Lainnya (Y/N) : ";
+    cin>>yesNo;
+   break;
+    
+    
+  }
+  x++;
+ } while(yesNo == 'Y' || yesNo == 'y');
+ cout<<"Catatan : ";
+ cin>>catatan;
+ cout<<"Pembayaran : "<<endl;
+ 
+ for(int i=0;i<x;i++){
+  hasil=hasil+totalSeluruhPesanan[i];
+ }
+ 
+ cout<<"Total Pesanan : "<<hasil<<endl;
+ cout<<"--Terima Kasih Atas Kunjungan Anda--"<<endl;
+}
