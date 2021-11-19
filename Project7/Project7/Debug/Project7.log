@@ -1,9 +1,0 @@
-﻿  MyForm.cpp
-MyForm.cpp(8): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  MyForm1.cpp
-  MyForm2.cpp
-  MyForm3.cpp
-  MyForm4.cpp
-  Generating Code...
-  Project7.vcxproj -> C:\Users\User\documents\visual studio 2015\Projects\Project7\Debug\Project7.exe
-  Project7.vcxproj -> C:\Users\User\documents\visual studio 2015\Projects\Project7\Debug\Project7.pdb (Full PDB)
